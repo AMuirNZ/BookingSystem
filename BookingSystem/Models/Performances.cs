@@ -8,9 +8,9 @@ namespace BookingSystem.Models
     public class Performances
     {
         public int Id { get; set; }
-        public int showId { get; set; }
+        public int ShowId { get; set; }
         public DateTime Date { get; set; }
 
     }
     }
-}
+
