@@ -12,5 +12,6 @@ namespace BookingSystem.Models
         public DateTime EndDate { get; set; }  
         public Decimal FullPrice { get; set; }
         public Decimal ConcessionPrice { get; set; }
+
     }
 }
