@@ -13,6 +13,7 @@ namespace BookingSystem.Controllers
     public class BookingsController : Controller
     {
         private readonly BookingContext _context;
+        //private int  = DatabaseManager.AddressId;
 
         public BookingsController(BookingContext context)
         {
