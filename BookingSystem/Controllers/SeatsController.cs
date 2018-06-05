@@ -7,13 +7,14 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookingSystem.Data;
 using BookingSystem.Models;
+using BookingSystem.Operations;
 
 namespace BookingSystem.Controllers
 {
     public class SeatsController : Controller
     {
         private readonly BookingContext _context;
-        //private int BookingID = DatabaseManager.BookingId;
+        private int BookingID = DatabaseManager.BookingId;
 
         public SeatsController(BookingContext context)
         {

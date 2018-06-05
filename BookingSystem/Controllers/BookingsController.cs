@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookingSystem.Data;
 using BookingSystem.Models;
+using BookingSystem.Operations;
 
 namespace BookingSystem.Controllers
 {
@@ -36,6 +37,7 @@ namespace BookingSystem.Controllers
 
             var booking = await _context.Booking
                 .SingleOrDefaultAsync(m => m.Id == id);
+            DatabaseManager.BookingId = (int)id;
             if (booking == null)
             {
                 return NotFound();
@@ -127,6 +129,7 @@ namespace BookingSystem.Controllers
 
             var booking = await _context.Booking
                 .SingleOrDefaultAsync(m => m.Id == id);
+          
             if (booking == null)
             {
                 return NotFound();
