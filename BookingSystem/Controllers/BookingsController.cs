@@ -37,7 +37,9 @@ namespace BookingSystem.Controllers
 
             var booking = await _context.Booking
                 .SingleOrDefaultAsync(m => m.Id == id);
+
             DatabaseManager.BookingId = (int)id;
+            //DatabaseManager.BookingName = (string)Name;
             if (booking == null)
             {
                 return NotFound();
