@@ -1,4 +1,5 @@
-﻿@model BookingSystem.Models.Booking
+﻿@model BookingSystem.DTO.BookingSystemDTO
+@using BookingSystem.Operations;
 
 @{
     ViewData["Title"] = "Details";
@@ -11,45 +12,45 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.myBooking.Id)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.myBooking.Name)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Email)
+            @Html.DisplayNameFor(model => model.myBooking.Email)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Email)
+            @Html.DisplayFor(model => model.myBooking.Email)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.NumberFullPrice)
+            @Html.DisplayNameFor(model => model.myBooking.NumberFullPrice)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.NumberFullPrice)
+            @Html.DisplayFor(model => model.myBooking.NumberFullPrice)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.NumberConcessionPrice)
+            @Html.DisplayNameFor(model => model.myBooking.NumberConcessionPrice)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.NumberConcessionPrice)
+            @Html.DisplayFor(model => model.myBooking.NumberConcessionPrice)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.StoreEmail)
+            @Html.DisplayNameFor(model => model.myBooking.StoreEmail)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.StoreEmail)
+            @Html.DisplayFor(model => model.myBooking.StoreEmail)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.TotalCost)
+            @Html.DisplayNameFor(model => model.myBooking.TotalCost)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.TotalCost)
+            @Html.DisplayFor(model => model.myBooking.TotalCost)
         </dd>
     </dl>
     <a asp-controller="Seats" asp-action="Create">Select seats</a>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    @*<a asp-action="Edit" asp-route-id="@Model.myBooking.Id">Edit</a>*@ |
     <a asp-action="Index">Back to List</a>
 </div>

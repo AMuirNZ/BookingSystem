@@ -1,4 +1,5 @@
-﻿@model BookingSystem.Models.Seat
+﻿@model BookingSystem.DTO.BookingSystemDTO
+@using BookingSystem.Operations;
 
 @{
     ViewData["Title"] = "Details";
@@ -11,20 +12,27 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.BookingId)
+            @Html.DisplayNameFor(model => model.mySeat.BookingId)
         </dt>
-        <dd>
-            @Html.DisplayFor(model => model.BookingId)
-        </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.SeatNumber)
+            @Html.DisplayNameFor(model => model.myBooking.Name)
+        </dt>
+        <dt>
+            @Html.DisplayFor(model => model.mySeat.BookingId)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.SeatNumber)
+            @Html.DisplayFor(model => model.mySeat.BookingId)
+        </dd>
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.mySeat.SeatNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.mySeat.SeatNumber)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    @*<a asp-action="Edit" asp-route-id="@Model.mySeat.Id">Edit</a> |*@
     <a asp-action="Index">Back to List</a>
 </div>

@@ -12,6 +12,7 @@ namespace BookingSystem.DTO
         public List<Seat> seats = new List<Seat>();
 
         public myBooking myBooking { get; set; }
+        public mySeat mySeat { get; set; }
 
 
     }

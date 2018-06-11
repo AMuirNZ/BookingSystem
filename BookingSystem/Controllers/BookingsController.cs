@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookingSystem.Data;
+using BookingSystem.DTO;
 using BookingSystem.Models;
 using BookingSystem.Operations;
 
@@ -38,14 +39,22 @@ namespace BookingSystem.Controllers
             var booking = await _context.Booking
                 .SingleOrDefaultAsync(m => m.Id == id);
 
-            DatabaseManager.BookingId = (int)id;
-            //DatabaseManager.BookingName = (string)Name;
+            
+
+            BookingSystemDTO bookingsystemdto = new BookingSystemDTO();
+            myBooking mybooking = new myBooking();
+
+            DatabaseManager.BookingId = booking.Id;
+            //DatabaseManager.BookingId = (int)id;
+
+            mybooking.Name = booking.Name; 
+
             if (booking == null)
             {
                 return NotFound();
             }
 
-            return View(booking);
+            return View(bookingsystemdto);
         }
 
         // GET: Bookings/Create

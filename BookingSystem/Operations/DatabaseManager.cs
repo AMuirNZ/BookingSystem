@@ -8,5 +8,6 @@ namespace BookingSystem.Operations
     public class DatabaseManager
     {
         public static int BookingId { get; set; }
+
     }
 }
