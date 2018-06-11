@@ -40,10 +40,21 @@ namespace BookingSystem.Controllers
                 .SingleOrDefaultAsync(m => m.Id == id);
 
 
+
+
             BookingSystemDTO bookingsystemdto = new BookingSystemDTO();
             mySeat mySeat = new mySeat();
 
-            //DatabaseManager.SeatId = booking.Id;
+            mySeat.Id = seat.Id;
+            mySeat.BookingId = seat.BookingId;
+            mySeat.SeatNumber = seat.SeatNumber;
+
+            var allseats = _context.Seat.ToList();
+            bookingsystemdto.seats = allseats;
+
+
+            bookingsystemdto.mySeat = mySeat;
+
 
             if (seat == null)
             {

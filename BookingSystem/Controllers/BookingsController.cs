@@ -42,12 +42,25 @@ namespace BookingSystem.Controllers
             
 
             BookingSystemDTO bookingsystemdto = new BookingSystemDTO();
-            myBooking mybooking = new myBooking();
+            myBooking myBooking = new myBooking();
 
             DatabaseManager.BookingId = booking.Id;
+            myBooking.Name = booking.Name;
+            myBooking.Email = booking.Email;
+            myBooking.NumberFullPrice = booking.NumberFullPrice;
+            myBooking.NumberConcessionPrice = booking.NumberConcessionPrice;
+            myBooking.StoreEmail = booking.StoreEmail;
+
+            myBooking.TotalCost = booking.TotalCost;
+
+
             //DatabaseManager.BookingId = (int)id;
 
-            mybooking.Name = booking.Name; 
+            var allbookings = _context.Booking.ToList();
+            bookingsystemdto.bookings = allbookings;
+
+
+            bookingsystemdto.myBooking = myBooking;
 
             if (booking == null)
             {

@@ -1,5 +1,6 @@
-﻿@model BookingSystem.DTO.BookingSystemDTO
+﻿@model BookingSystem.DTO.BookingSystemDTO;
 @using BookingSystem.Operations;
+
 
 @{
     ViewData["Title"] = "Details";
@@ -51,6 +52,6 @@
     <a asp-controller="Seats" asp-action="Create">Select seats</a>
 </div>
 <div>
-    @*<a asp-action="Edit" asp-route-id="@Model.myBooking.Id">Edit</a>*@ |
+    @*<a asp-action="Edit" asp-route-id="@Model.myBooking.Id">Edit</a> |*@
     <a asp-action="Index">Back to List</a>
 </div>
