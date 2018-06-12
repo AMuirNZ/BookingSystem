@@ -8,6 +8,7 @@ namespace BookingSystem.DTO
     public class myBooking
     {
         public int Id { get; set; }
+        public int PerformanceId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public int NumberFullPrice { get; set; }

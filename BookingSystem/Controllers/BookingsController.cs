@@ -45,6 +45,7 @@ namespace BookingSystem.Controllers
             myBooking myBooking = new myBooking();
 
             DatabaseManager.BookingId = booking.Id;
+            myBooking.PerformanceId = booking.PerformanceId;
             myBooking.Name = booking.Name;
             myBooking.Email = booking.Email;
             myBooking.NumberFullPrice = booking.NumberFullPrice;
@@ -81,7 +82,7 @@ namespace BookingSystem.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Email,NumberFullPrice,NumberConcessionPrice,StoreEmail,TotalCost")] Booking booking)
+        public async Task<IActionResult> Create([Bind("Id,PerformanceId,Name,Email,NumberFullPrice,NumberConcessionPrice,StoreEmail,TotalCost")] Booking booking)
         {
             if (ModelState.IsValid)
             {
@@ -113,7 +114,7 @@ namespace BookingSystem.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Email,NumberFullPrice,NumberConcessionPrice,StoreEmail,TotalCost")] Booking booking)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,PerformanceId,Name,Email,NumberFullPrice,NumberConcessionPrice,StoreEmail,TotalCost")] Booking booking)
         {
             if (id != booking.Id)
             {
