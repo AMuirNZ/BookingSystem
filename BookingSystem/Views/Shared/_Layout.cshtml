@@ -7,7 +7,8 @@
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
+        @*<link rel="stylesheet" href="~/css/site.css" />*@
+        <link rel="stylesheet" href="~/css/freelancer.css" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -16,7 +17,7 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
-<body>
+@*<body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -39,14 +40,63 @@
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
-    </nav>
-    <div class="container body-content">
+</nav>*@
+
+
+<body id="page-top" class="index">
+<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+
+<!-- Navigation -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <!-- <a class="navbar-brand" href="#page-top">Start Bootstrap</a> -->
+            @*<img src="img/logo.png" height="60">*@
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-area="" asp-controller="Bookings" asp-action="Index">Bookings</a></li>
+                <li><a asp-area="" asp-controller="Performances" asp-action="Index">Performances</a></li>
+                <li><a asp-area="" asp-controller="Seats" asp-action="Index">Seats</a></li>
+                <li><a asp-area="" asp-controller="Shows" asp-action="Index">Shows</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+@*<div class="container body-content">*@
+
+<!-- Header -->
+    
+
+<!-- Portfolio Grid Section -->
+<section id="portfolio">
+    <div class="container" id="maincontent=" tabindex="-1">
+        @RenderBody()
+		  
+		 
+		  
+		  
+    </div>
+</section>
+
+
+@*<div class="container">
         @RenderBody()
         <hr />
         <footer>
             <p>&copy; 2018 - BookingSystem</p>
         </footer>
-    </div>
+    </div>*@
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

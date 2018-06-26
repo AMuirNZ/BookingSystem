@@ -1,0 +1,56 @@
+@import url("bootstrap.min.css");
+@import url(http://fonts.googleapis.com/css?family=Lora|Montez);
+
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Lora, 'san-serif';
+}
+|
+.navbar {
+    margin-bottom: 20px;
+}
+.navbar-default {
+    background-color: #A0C33C;
+    border-color: #97BD1A;
+}
+
+.navbar-default .navbar-brand {
+    color: #333333;
+    font-size: 200%;
+    font-weight: bold;
+    font-family: Montez, 'san-serif';
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    background-color: rgba(0, 0, 0, 0);
+    color: #000000;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #77A717;
+}
+.dropdown-header {
+    color: #666666;
+    font-size: 100%;
+    font-style: italic;
+}
+.dropdown-menu .divider {
+    background-color: #77A717;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #4f4f4f;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #61A704;
+    color: #333333;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #61A704;
+    color: #555555;
+}
+.navbar-default .navbar-toggle {
+    border-color: #61A704;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #9FBE2D;
+}	
