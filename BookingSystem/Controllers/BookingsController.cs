@@ -42,17 +42,22 @@ namespace BookingSystem.Controllers
             
 
             BookingSystemDTO bookingsystemdto = new BookingSystemDTO();
-            myBooking myBooking = new myBooking();
+            myBooking myShows = new myBooking();
+
+
+            //myShow.
+
+
 
             DatabaseManager.BookingId = booking.Id;
-            myBooking.PerformanceId = booking.PerformanceId;
-            myBooking.Name = booking.Name;
-            myBooking.Email = booking.Email;
-            myBooking.NumberFullPrice = booking.NumberFullPrice;
-            myBooking.NumberConcessionPrice = booking.NumberConcessionPrice;
-            myBooking.StoreEmail = booking.StoreEmail;
+            myShows.PerformanceId = booking.PerformanceId;
+            myShows.Name = booking.Name;
+            myShows.Email = booking.Email;
+            myShows.NumberFullPrice = booking.NumberFullPrice;
+            myShows.NumberConcessionPrice = booking.NumberConcessionPrice;
+            myShows.StoreEmail = booking.StoreEmail;
 
-            myBooking.TotalCost = booking.TotalCost;
+            myShows.TotalCost = booking.TotalCost;
 
 
             //DatabaseManager.BookingId = (int)id;
@@ -61,7 +66,7 @@ namespace BookingSystem.Controllers
             bookingsystemdto.bookings = allbookings;
 
 
-            bookingsystemdto.myBooking = myBooking;
+            bookingsystemdto.myBooking = myShows;
 
             if (booking == null)
             {

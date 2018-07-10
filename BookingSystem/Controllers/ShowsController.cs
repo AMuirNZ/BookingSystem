@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookingSystem.Data;
+using BookingSystem.DTO;
 using BookingSystem.Models;
+using BookingSystem.Operations;
 
 namespace BookingSystem.Controllers
 {
@@ -33,8 +35,35 @@ namespace BookingSystem.Controllers
                 return NotFound();
             }
 
+
             var shows = await _context.Shows
                 .SingleOrDefaultAsync(m => m.Id == id);
+
+
+
+            BookingSystemDTO bookingsystemdto = new BookingSystemDTO();
+            myShow myShow = new myShow();
+
+            DatabaseManager.ShowId = shows.Id;
+            myShow.Name = shows.Name;
+            myShow.EndDate = shows.EndDate;
+            myShow.FullPrice = shows.FullPrice;
+            myShow.ConcessionPrice = shows.ConcessionPrice;
+           
+
+         
+
+
+            
+
+            var allshows = _context.Shows.ToList();
+            bookingsystemdto.shows = allshows;
+
+
+            bookingsystemdto.myShows = myShow;
+
+            //var shows = await _context.Shows
+            //    .SingleOrDefaultAsync(m => m.Id == id);
             if (shows == null)
             {
                 return NotFound();
