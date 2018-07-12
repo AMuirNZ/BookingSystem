@@ -40,8 +40,6 @@ namespace BookingSystem.Controllers
                 .SingleOrDefaultAsync(m => m.Id == id);
 
 
-
-
             BookingSystemDTO bookingsystemdto = new BookingSystemDTO();
             mySeat mySeat = new mySeat();
 

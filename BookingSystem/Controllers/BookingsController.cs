@@ -39,14 +39,8 @@ namespace BookingSystem.Controllers
             var booking = await _context.Booking
                 .SingleOrDefaultAsync(m => m.Id == id);
 
-            
-
             BookingSystemDTO bookingsystemdto = new BookingSystemDTO();
             myBooking myShows = new myBooking();
-
-
-            //myShow.
-
 
 
             DatabaseManager.BookingId = booking.Id;

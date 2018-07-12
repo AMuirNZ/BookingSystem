@@ -42,13 +42,13 @@ namespace BookingSystem.Controllers
 
 
             BookingSystemDTO bookingsystemdto = new BookingSystemDTO();
-            myShow myShow = new myShow();
+            myShow myShows = new myShow();
 
             DatabaseManager.ShowId = shows.Id;
-            myShow.Name = shows.Name;
-            myShow.EndDate = shows.EndDate;
-            myShow.FullPrice = shows.FullPrice;
-            myShow.ConcessionPrice = shows.ConcessionPrice;
+            myShows.Name = shows.Name;
+            myShows.EndDate = shows.EndDate;
+            myShows.FullPrice = shows.FullPrice;
+            myShows.ConcessionPrice = shows.ConcessionPrice;
            
 
          
@@ -60,7 +60,7 @@ namespace BookingSystem.Controllers
             bookingsystemdto.shows = allshows;
 
 
-            bookingsystemdto.myShows = myShow;
+            bookingsystemdto.myShows = myShows;
 
             //var shows = await _context.Shows
             //    .SingleOrDefaultAsync(m => m.Id == id);
