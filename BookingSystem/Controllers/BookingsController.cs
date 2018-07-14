@@ -51,7 +51,7 @@ namespace BookingSystem.Controllers
             myShows.NumberConcessionPrice = booking.NumberConcessionPrice;
             myShows.StoreEmail = booking.StoreEmail;
 
-            myShows.TotalCost = booking.TotalCost;
+            myShows.TotalCost = (booking.NumberFullPrice * 30) + (booking.NumberConcessionPrice * 25);
 
 
             //DatabaseManager.BookingId = (int)id;
