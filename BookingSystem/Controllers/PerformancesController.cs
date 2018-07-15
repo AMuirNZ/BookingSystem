@@ -43,7 +43,7 @@ namespace BookingSystem.Controllers
 
             DatabaseManager.PerformanceId = performances.Id;
             
-            myPerformances.ShowId = performances.ShowId;
+            DatabaseManager.ShowId = performances.ShowId;
             myPerformances.Date = performances.Date;
 
 

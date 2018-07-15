@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using BookingSystem.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm" class="navbar-right">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">Hello You!</a>
+            </li>
+            <li>
+                <button type="submit" class="btn btn-link navbar-btn navbar-link">Log out</button>
+            </li>
+            <li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-area="" asp-controller="Shows" asp-action="Index">Shows</a></li>
+            <li><a asp-area="" asp-controller="Performances" asp-action="Index">Performances</a></li>
+            <li><a asp-area="" asp-controller="Bookings" asp-action="Index">Bookings</a></li>
+            <li><a asp-area="" asp-controller="Seats" asp-action="Index">Seats</a></li>
+            </li>
+        </ul>
+    </form>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li><a asp-area="" asp-controller="Performances" asp-action="Index">Book Performance</a></li>
+    </ul>
+}
+
+@*@if (SignInManager.IsSignedIn(User))
+{
+   
+}*@

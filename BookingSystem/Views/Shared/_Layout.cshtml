@@ -61,16 +61,14 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                
 
-                <li><a asp-area="" asp-controller="Shows" asp-action="Index">Shows</a></li>
-                <li><a asp-area="" asp-controller="Performances" asp-action="Index">Performances</a></li>
-                <li><a asp-area="" asp-controller="Bookings" asp-action="Create">Bookings</a></li>
-
-                <li><a asp-area="" asp-controller="Seats" asp-action="Index">Seats</a></li>
+                
+                
 
 
             </ul>
+            @await Html.PartialAsync("_AdminPage")
         </div>
         <!-- /.navbar-collapse -->
     </div>
