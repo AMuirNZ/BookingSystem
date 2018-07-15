@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookingSystem.Data;
 using BookingSystem.Models;
+using BookingSystem.DTO;
+using BookingSystem.Operations;
 
 namespace BookingSystem.Controllers
 {
@@ -35,6 +37,28 @@ namespace BookingSystem.Controllers
 
             var performances = await _context.Performances
                 .SingleOrDefaultAsync(m => m.Id == id);
+
+            BookingSystemDTO bookingsystemdto = new BookingSystemDTO();
+            myPerformance myPerformances = new myPerformance();
+
+            DatabaseManager.PerformanceId = performances.Id;
+            
+            myPerformances.ShowId = performances.ShowId;
+            myPerformances.Date = performances.Date;
+
+
+
+
+
+
+
+
+            var allperformances = _context.Performances.ToList();
+            bookingsystemdto.performances = allperformances;
+
+
+            bookingsystemdto.myPerformances = myPerformances;
+
             if (performances == null)
             {
                 return NotFound();

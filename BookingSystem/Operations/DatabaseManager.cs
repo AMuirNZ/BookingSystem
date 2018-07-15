@@ -9,5 +9,8 @@ namespace BookingSystem.Operations
     {
         public static int BookingId { get; set; }
         public static int ShowId { get; set; }
+        public static int PerformanceId { get; set; }
+        public static Decimal FullPrice { get; set; }
+        public static Decimal ConcessionPrice { get; set; }
     }
 }

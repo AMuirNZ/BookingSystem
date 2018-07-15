@@ -47,8 +47,8 @@ namespace BookingSystem.Controllers
             DatabaseManager.ShowId = shows.Id;
             myShows.Name = shows.Name;
             myShows.EndDate = shows.EndDate;
-            myShows.FullPrice = shows.FullPrice;
-            myShows.ConcessionPrice = shows.ConcessionPrice;
+            DatabaseManager.FullPrice = shows.FullPrice;
+            DatabaseManager.ConcessionPrice = shows.ConcessionPrice;
            
 
          
