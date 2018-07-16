@@ -18,87 +18,78 @@
     </environment>
 </head>
 @*<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">BookingSystem</a>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">BookingSystem</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-area="" asp-controller="Bookings" asp-action="IIndex">Bookings</a></li>
+                        <li><a asp-area="" asp-controller="Performances" asp-action="Index">Performances</a></li>
+                        <li><a asp-area="" asp-controller="Seats" asp-action="Index">Seats</a></li>
+                        <li><a asp-area="" asp-controller="Shows" asp-action="Index">Shows</a></li>
+                    </ul>
+                    @await Html.PartialAsync("_LoginPartial")
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Bookings" asp-action="Index">Bookings</a></li>
-                    <li><a asp-area="" asp-controller="Performances" asp-action="Index">Performances</a></li>
-                    <li><a asp-area="" asp-controller="Seats" asp-action="Index">Seats</a></li>
-                    <li><a asp-area="" asp-controller="Shows" asp-action="Index">Shows</a></li>
-                </ul>
-                @await Html.PartialAsync("_LoginPartial")
-            </div>
-        </div>
-</nav>*@
+    </nav>*@
 
 
 <body id="page-top" class="index">
-<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+    <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
 
-<!-- Navigation -->
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-            </button>
-            <!-- <a class="navbar-brand" href="#page-top">Start Bootstrap</a> -->
-            <a asp-area="" asp-controller="Account" asp-action="Login"><img src="/img/logo.png" height="60"></a>
-</div>
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <!-- <a class="navbar-brand" href="#page-top">Start Bootstrap</a> -->
+                <a asp-area="" asp-controller="Account" asp-action="Login"><img src="/img/logo.png" height="60"></a>
+            </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                
-
-                
-                
-
-
-            </ul>
-            @await Html.PartialAsync("_AdminPage")
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right"></ul>
+                @await Html.PartialAsync("_AdminPage")
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
+        <!-- /.container-fluid -->
+    </nav>
 
-@*<div class="container body-content">*@
+    @*<div class="container body-content">*@
 
-<!-- Header -->
-    
-
-<!-- Portfolio Grid Section -->
-<section id="portfolio">
-    <div class="container" id="maincontent=" tabindex="-1">
-        @RenderBody()
-		  
-		 
-		  
-		  
-    </div>
-</section>
+    <!-- Header -->
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container" id="maincontent=" tabindex="-1">
+            @RenderBody()
 
 
-@*<div class="container">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - BookingSystem</p>
-        </footer>
-    </div>*@
+
+
+        </div>
+    </section>
+
+
+    @*<div class="container">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; 2018 - BookingSystem</p>
+            </footer>
+        </div>*@
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

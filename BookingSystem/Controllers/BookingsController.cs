@@ -44,7 +44,7 @@ namespace BookingSystem.Controllers
 
 
             DatabaseManager.BookingId = booking.Id;
-            myShows.PerformanceId = booking.PerformanceId;
+            DatabaseManager.PerformanceId = booking.PerformanceId;
             myShows.Name = booking.Name;
             myShows.Email = booking.Email;
             myShows.NumberFullPrice = booking.NumberFullPrice;

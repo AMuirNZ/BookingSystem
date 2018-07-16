@@ -44,7 +44,7 @@ namespace BookingSystem.Controllers
             mySeat mySeat = new mySeat();
 
             mySeat.Id = seat.Id;
-            mySeat.BookingId = seat.BookingId;
+            DatabaseManager.BookingId = seat.BookingId;
             mySeat.SeatNumber = seat.SeatNumber;
 
             var allseats = _context.Seat.ToList();
