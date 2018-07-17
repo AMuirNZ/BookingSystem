@@ -34,6 +34,7 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: left;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -109,6 +110,8 @@ header .intro-text .skills {
     font-size: 1.75em;
   }
 }
+
+
 .navbar-custom {
   background: #1e284c;
   font-family: Arial;
@@ -520,4 +523,8 @@ fieldset[disabled] .btn-success.active {
 }
 div#maincontent {
   outline: none;
+}
+
+.label {
+    text-align: left;
 }
