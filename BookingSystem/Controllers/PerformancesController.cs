@@ -142,8 +142,8 @@ namespace BookingSystem.Controllers
         // GET: Performances/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            var alldata = from g in _context.Shows
-                where g.Id == Id
+           
+          
 
             if (id == null)
             {
