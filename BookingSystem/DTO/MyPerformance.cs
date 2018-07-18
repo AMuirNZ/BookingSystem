@@ -9,6 +9,7 @@ namespace BookingSystem.DTO
     {
         public int Id { get; set; }
         public int ShowId { get; set; }
+        public string Name { get; set; }
         public DateTime Date { get; set; }
     }
 }

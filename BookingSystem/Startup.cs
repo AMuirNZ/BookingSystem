@@ -73,7 +73,7 @@ namespace BookingSystem
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Performances}/{action=Index}/{id?}");
             });
 
             //CreateUserRoles(services).Wait();

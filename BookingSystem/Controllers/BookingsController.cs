@@ -83,12 +83,20 @@ namespace BookingSystem.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,PerformanceId,Name,Email,NumberFullPrice,NumberConcessionPrice,StoreEmail,TotalCost")] Booking booking)
         {
+            BookingSystemDTO bookingsystemdto = new BookingSystemDTO();
+            myBooking myShows = new myBooking();
+
+
+
             if (ModelState.IsValid)
             {
                 _context.Add(booking);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Details));
             }
+
+           
+
             return View(booking);
         }
 

@@ -9,6 +9,8 @@
 
 <h2>Index</h2>
 
+ 
+
 <p>
     @if (SignInManager.IsSignedIn(User))
         {
@@ -28,6 +30,7 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Date)
+               
             </th>
             <th></th>
         </tr> 
@@ -41,6 +44,7 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Date)
+                7.30pm
             </td>
             @if (SignInManager.IsSignedIn(User))
             {
