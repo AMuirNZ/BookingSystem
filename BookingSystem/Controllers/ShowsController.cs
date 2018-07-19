@@ -45,11 +45,11 @@ namespace BookingSystem.Controllers
             myShow myShows = new myShow();
 
             DatabaseManager.ShowId = shows.Id;
-            myShows.Name = shows.Name;
+            DatabaseManager.ShowName = shows.Name;
             myShows.EndDate = shows.EndDate;
             DatabaseManager.FullPrice = shows.FullPrice;
             DatabaseManager.ConcessionPrice = shows.ConcessionPrice;
-           
+            
 
          
 

@@ -9,8 +9,8 @@ using BookingSystem.Data;
 using BookingSystem.Models;
 using BookingSystem.DTO;
 using BookingSystem.Operations;
-
 namespace BookingSystem.Controllers
+
 {
     public class PerformancesController : Controller
     {
@@ -42,7 +42,7 @@ namespace BookingSystem.Controllers
             myPerformance myPerformances = new myPerformance();
 
             DatabaseManager.PerformanceId = performances.Id;
-            
+
             DatabaseManager.ShowId = performances.ShowId;
 
 
@@ -77,7 +77,7 @@ namespace BookingSystem.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ShowId,Date")] Performances performances)
+        public async Task<IActionResult> Create([Bind("Id,Name,ShowId,Date")] Performances performances)
         {
             if (ModelState.IsValid)
             {
@@ -109,7 +109,7 @@ namespace BookingSystem.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ShowId,Date")] Performances performances)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ShowId,Date")] Performances performances)
         {
             if (id != performances.Id)
             {
@@ -142,9 +142,6 @@ namespace BookingSystem.Controllers
         // GET: Performances/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-           
-          
-
             if (id == null)
             {
                 return NotFound();

@@ -44,7 +44,7 @@ namespace BookingSystem.Controllers
 
 
             DatabaseManager.BookingId = booking.Id;
-            DatabaseManager.PerformanceId = booking.PerformanceId;
+            myShows.PerformanceId = booking.PerformanceId;
             myShows.Name = booking.Name;
             myShows.Email = booking.Email;
             myShows.NumberFullPrice = booking.NumberFullPrice;
@@ -92,7 +92,8 @@ namespace BookingSystem.Controllers
             {
                 _context.Add(booking);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Details));
+                return RedirectToAction(nameof(Index));
+
             }
 
            

@@ -29,7 +29,7 @@ namespace BookingSystem
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDbContext<BookingContext>(options => options.UseSqlite("Data Source=bookingsystem.db"));
+            services.AddDbContext<BookingContext>(options => options.UseSqlite("Data Source=theatrebooking.db"));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
