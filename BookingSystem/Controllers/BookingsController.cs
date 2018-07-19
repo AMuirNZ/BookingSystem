@@ -182,6 +182,8 @@ namespace BookingSystem.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+
+
         private bool BookingExists(int id)
         {
             return _context.Booking.Any(e => e.Id == id);

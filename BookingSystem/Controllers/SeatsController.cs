@@ -187,6 +187,11 @@ namespace BookingSystem.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public async Task<IActionResult> Complete()
+        {
+            return View();
+        }
+
         private bool SeatExists(int id)
         {
             return _context.Seat.Any(e => e.Id == id);
