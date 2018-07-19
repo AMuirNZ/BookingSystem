@@ -8,10 +8,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+
+
+<h1>Shows</h1>
 
 <p>
+    
+@if (SignInManager.IsSignedIn(User))
+{
     <a asp-action="Create">Create New</a>
+}
 </p>
 <table class="table">
     <thead>
