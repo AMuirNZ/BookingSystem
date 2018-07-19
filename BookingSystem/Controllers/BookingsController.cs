@@ -92,7 +92,7 @@ namespace BookingSystem.Controllers
             {
                 _context.Add(booking);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Details", new {booking.Id });
 
             }
 
