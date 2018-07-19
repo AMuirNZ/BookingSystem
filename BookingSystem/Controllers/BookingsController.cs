@@ -52,7 +52,7 @@ namespace BookingSystem.Controllers
             myShows.StoreEmail = booking.StoreEmail;
 
             myShows.TotalCost = (booking.NumberFullPrice * 30) + (booking.NumberConcessionPrice * 25);
-
+            DatabaseManager.NumberOfSeats = booking.NumberFullPrice + booking.NumberConcessionPrice;
 
             //DatabaseManager.BookingId = (int)id;
 

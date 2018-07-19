@@ -29,6 +29,8 @@ namespace BookingSystem.Data
             public DbSet<Performances> Performances { get; set; }
             public DbSet<Seat> Seat { get; set; }
             public DbSet<Shows> Shows { get; set; }
+           
+
 
     }
     

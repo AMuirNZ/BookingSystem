@@ -53,8 +53,10 @@ namespace BookingSystem.Controllers
 
             bookingsystemdto.mySeat = mySeat;
 
+            
 
-            if (seat == null)
+
+                        if (seat == null)
             {
                 return NotFound();
             }
@@ -76,13 +78,33 @@ namespace BookingSystem.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,BookingId,SeatNumber")] Seat seat)
         {
+
+
             if (ModelState.IsValid)
-            {
-                _context.Add(seat);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(seat);
+                DatabaseManager.NumberOfSeats = DatabaseManager.NumberOfSeats - 1;
+            
+
+
+
+               
+                {
+                    _context.Add(seat);
+                    await _context.SaveChangesAsync();
+                    if (DatabaseManager.NumberOfSeats <= 0)
+                    {
+                        return RedirectToAction(nameof(Index));
+                    }
+                    else
+                    {
+                    return RedirectToAction(nameof(Create));
+                }
+                }
+
+                return View(seat);
+            
+
+
+          
         }
 
         // GET: Seats/Edit/5
