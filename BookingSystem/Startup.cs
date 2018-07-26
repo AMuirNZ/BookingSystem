@@ -73,6 +73,7 @@ namespace BookingSystem
             {
                 routes.MapRoute(
                     name: "default",
+                    //Default start page to Performances rather than home.
                     template: "{controller=Performances}/{action=Index}/{id?}");
             });
 

@@ -36,9 +36,13 @@ namespace BookingSystem.Controllers
                 return NotFound();
             }
 
+
+
             var booking = await _context.Booking
                 .SingleOrDefaultAsync(m => m.Id == id);
 
+
+            //Pass information over so it can be sent to database and used in other categories
             BookingSystemDTO bookingsystemdto = new BookingSystemDTO();
             myBooking myShows = new myBooking();
 

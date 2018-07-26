@@ -38,6 +38,8 @@ namespace BookingSystem.Controllers
             var performances = await _context.Performances
                 .SingleOrDefaultAsync(m => m.Id == id);
 
+
+            //Pass information over so it can be sent to database and used in other categories
             BookingSystemDTO bookingsystemdto = new BookingSystemDTO();
             myPerformance myPerformances = new myPerformance();
 

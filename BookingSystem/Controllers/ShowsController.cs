@@ -40,7 +40,7 @@ namespace BookingSystem.Controllers
                 .SingleOrDefaultAsync(m => m.Id == id);
 
 
-
+            //Pass information over so it can be sent to database and used in other categories
             BookingSystemDTO bookingsystemdto = new BookingSystemDTO();
             myShow myShows = new myShow();
 
